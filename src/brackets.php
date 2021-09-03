@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 	<meta charset="latin-1">
-    <title>Example</title>
+    <title>Brackets</title>
 
 </head>
 		
