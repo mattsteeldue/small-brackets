@@ -5,9 +5,9 @@
 =pod
 EXPECTED :
 input           --> output
-(abc)	          --> abc
+(abc)	        --> abc
 ((abc))	        --> abc
-(abc	          --> (abc
+(abc	        --> (abc
 ()              -->
 (ab) (cd)       --> (ab) (cd)
 ((ab) (cd))	    --> (ab) (cd)
@@ -19,7 +19,9 @@ use  warnings ;
 while ( my $input = <DATA> ) {
   chomp $input;
   my $output = $input ;
-  $output = $2 while $output =~ m/^ (  \(   (   (?<inside>  [^()]++ | (?1)   )*+   )  \)   ) $/x ;
+
+  #           recurse                   1       2      inside is ignored  recursion       2       1  trailing spaces
+  $output = $2 while $output =~ m/^ \s* (  \(   (   (?<inside>  [^()]++ |    (?1)   )*+   )  \)   )  \s* $/x ;
   printf( "%-15s --> %-15s\n", $input, $output ) ;
 }
 
@@ -53,8 +55,9 @@ Casi di esempio
 ((ab) (cd))
 ab(cd)
 
-((abc)
-((abc)))
+ (abc)
+ ((abc)
+ ((abc)))
 (()(abc))
 (()(abc)))
-((()))
+ (())
