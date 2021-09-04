@@ -1,3 +1,13 @@
+<!doctype html>
+<html lang="it">
+<head>
+	<meta charset="latin-1">
+    <title>Brackets</title>
+
+</head>
+		
+<body>
+
     <?php 
     
         $data = $_GET["DATA"] ;
@@ -26,6 +36,18 @@
             $result = $found[2][0] ;
         }
 
-        echo "$result" ;
-        
+        echo "
+        Your DATA is : 
+        <br>
+        $data
+        <br>
+        Result is :
+        <br>
+        $result
+        <br>
+        " ;
     ?>
+
+</body>
+</html>
+
