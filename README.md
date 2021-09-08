@@ -2,7 +2,7 @@
 --  External brackets  
 --
 
-1. Design and implement a library/package to remove external matching round brackets. Assume no pathological input is provided [ e.g. no ì((abc)î ].
+1. Design and implement a library/package to remove external matching round brackets. Assume no pathological input is provided [ e.g. no ‚Äú((abc)‚Äù ].
 
   I used Perl to study the problem that can be reduced to a recursive regular expression like the following
 
@@ -39,7 +39,7 @@
 
 2. How can we be reasonably sure about the correctness of the solution?
 
-    We must provid a complete set of successful tests, even pathological cases.
+    We must provide a complete set of successful tests, even pathological cases.
 
 
 3. Discuss the space-time complexity of the solution (both in general and language related)
