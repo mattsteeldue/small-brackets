@@ -2,7 +2,7 @@
 --  External brackets  
 --
 
-1. Design and implement a library/package to remove external matching round brackets. Assume no pathological input is provided [ e.g. no ì((abc)î ].
+1. Design and implement a library/package to remove external matching round brackets. Assume no pathological input is provided [ e.g. no ‚Äú((abc)‚Äù ].
 
   I used Perl to study the problem that can be reduced to a recursive regular expression like the following
 
@@ -39,12 +39,12 @@
 
 2. How can we be reasonably sure about the correctness of the solution?
 
-    We must provid a complete set of successful tests, even pathological cases.
+    We must provid a complete set of successful tests, even pathological cases. In 'test' directory the Perl script has some of them.
 
 
 3. Discuss the space-time complexity of the solution (both in general and language related)
 
-    This is for sure a bi-recursive problem with some subtle complexity, but Perl and RegExp can handle it well.
+    This is a recursive problem with some subtle complexity, but Perl and RegExp can handle it well.
     PHP provides the same RegExp semantics, so the translation is quite straigth.
     
     Using RegExp hides most of complexity, but in general Perl and PHP are both memory expensive, but nowadays that's not the point.
