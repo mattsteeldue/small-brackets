@@ -1,4 +1,4 @@
-    <?php 
+<?php 
     
         $data = $_GET["DATA"] ;
         $result = $data ;
