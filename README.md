@@ -57,5 +57,11 @@
 
 5. Provide this solution as a service a user can call via HTTP (preferred deployment method is docker but alternatives are welcome if justified)
 
-    More to do.
+    I'm not familiar with Dockerfile and I prefer using docker-compose technique: in trunk directory there is docker-compose.yaml that can be used directly via
+    
+      $ docker-compose up
+    
+    that build and start the container. PHP page can be accessed via browser providing a DATA parameter, for example
+    
+      http://localhost:8000/brackets.php?DATA=(((AB))(CD)))
 

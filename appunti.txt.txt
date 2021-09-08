@@ -1,6 +1,0 @@
-docker-compose up 
-REM per costruire immagine e container a partire da docker-compose.yaml
-
-
-interrogare la pagina con http://localhost:8000/brackets.php?DATA=(((AB))((CD)))
-
